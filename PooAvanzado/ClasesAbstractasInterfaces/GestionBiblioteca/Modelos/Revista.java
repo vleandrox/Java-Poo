@@ -80,7 +80,7 @@ public class Revista extends ItemBiblioteca implements Catalogable {
         else{
             multa = 0;
         }
-        return multa;        
+        return multa;      
     }
 
     @Override
