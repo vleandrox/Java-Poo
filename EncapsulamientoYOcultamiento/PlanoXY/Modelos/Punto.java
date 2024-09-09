@@ -1,5 +1,4 @@
 package EncapsulamientoYOcultamiento.PlanoXY.Modelos;
-import java.util.ArrayList;
 public class Punto {
     
     private double x;
