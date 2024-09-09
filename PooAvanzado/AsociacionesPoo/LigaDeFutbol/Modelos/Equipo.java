@@ -1,27 +1,19 @@
 package PooAvanzado.AsociacionesPoo.LigaDeFutbol.Modelos;
-import java.util.ArrayList;
 public class Equipo {
 
-    private String nombre;
-    private static ArrayList<Equipo> equipos = new ArrayList<Equipo>();
+    private String nombreEquipo;   
 
     public Equipo() {        
     }
-    public Equipo(String nombre) {
-        this.nombre = nombre;
-        equipos.add(this);
+    public Equipo(String nombreEquipo) {
+        this.nombreEquipo = nombreEquipo;
     }
-    public String getNombre() {
-        return nombre;
+    public String getNombreEquipo() {
+        return nombreEquipo;
     }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreEquipo(String nombreEquipo) {
+        this.nombreEquipo = nombreEquipo;
     }
 
-    public void imprimirEquipo() {
-        System.out.println("Equipos guardados:");
-        for (Equipo equipo : equipos) {
-            System.out.println(equipo.getNombre());
-        }
-    }
+    
 }
