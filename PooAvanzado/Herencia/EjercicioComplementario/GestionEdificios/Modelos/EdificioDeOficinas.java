@@ -44,4 +44,14 @@ public class EdificioDeOficinas extends Edificio{
     public int cantidadPersonas(){
         return this.getNumeroDePersonas() * this.getNumeroDePisos() * this.getNumeroDeOficinas();
     }
+
+    @Override
+    public double calcularSuperficie() {
+        return ancho * largo;
+    }
+
+    @Override
+    public double calcularVolumen() {
+        return ancho * largo * alto;
+    }
 }

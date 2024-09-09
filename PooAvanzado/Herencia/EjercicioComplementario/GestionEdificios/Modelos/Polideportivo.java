@@ -42,5 +42,15 @@ public class Polideportivo extends Edificio {
     public  int contarPolideportivosAbiertos() {
         return abiertos;
     }
+
+    @Override
+    public double calcularSuperficie() {
+        return ancho * largo;
+    }
+
+    @Override
+    public double calcularVolumen() {
+        return ancho * largo * alto;
+    }
     
 }

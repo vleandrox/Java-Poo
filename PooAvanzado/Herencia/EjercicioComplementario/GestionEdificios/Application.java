@@ -32,9 +32,8 @@ public class Application {
                 System.out.println("Cantidad de Polideportivos Abiertos: " + polideportivo.contarPolideportivosAbiertos());
                                
             } else if (edificio instanceof EdificioDeOficinas) {
-                EdificioDeOficinas edificioOficinas = (EdificioDeOficinas) edificio;
-                edificioOficinas.cantidadPersonas();
-                System.out.println(edificioOficinas.cantidadPersonas()); 
+                EdificioDeOficinas edificioOficinas = (EdificioDeOficinas) edificio; 
+                System.out.println("Cantidad de personas en el edificio: " + edificioOficinas.cantidadPersonas());
             }
         }            
     }

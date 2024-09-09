@@ -1,6 +1,6 @@
 package PooAvanzado.Herencia.EjercicioComplementario.GestionEdificios.Modelos;
 
-public class Edificio {
+public abstract class Edificio {
     
     protected double ancho;
     protected double alto;
@@ -33,10 +33,7 @@ public class Edificio {
         this.largo = largo;
     }
 
-    public double calcularSuperficie() {
-        return ancho * alto;
-    }
-    public double calcularVolumen() {
-        return ancho * alto * largo;
-    }
+    public abstract double calcularSuperficie();
+
+    public abstract double calcularVolumen();
 }

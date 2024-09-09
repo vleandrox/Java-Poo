@@ -1,5 +1,5 @@
 package PooAvanzado.Herencia.HerenciaMascotas.Modelos;
-
+import java.util.Objects;
 public class Perro extends Animal {
     
     private String raza;
@@ -7,7 +7,9 @@ public class Perro extends Animal {
     public Perro() {
         super();
     }
-
+    public Perro(String nombre, int edad) {
+        super(nombre, edad);    
+    }
     public Perro(String nombre, Integer edad,  String raza) {
         super(nombre, edad);
         this.raza = raza;
@@ -27,40 +29,26 @@ public class Perro extends Animal {
 
     @Override
     public void comer() {
-        super.comer();
-        System.out.println("El perro está comiendo croquetas");
+        System.out.println("El perro " + nombre + " está comiendo croquetas.");
     }
 
     @Override
     public void dormir() {
-        super.dormir();
-        System.out.println("El perro esta durmiendo");
+        System.out.println("El perro " + nombre + " está durmiendo en su cama.");
     }
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((raza == null) ? 0 : raza.hashCode());
-        return result;
+        return Objects.hash(nombre, edad, raza);
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Perro other = (Perro) obj;
-        if (raza == null) {
-            if (other.raza != null)
-                return false;
-        } else if (!raza.equals(other.raza))
-            return false;
-        return true;
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Perro perro = (Perro) obj;
+        return edad == perro.edad &&
+                Objects.equals(nombre, perro.nombre) &&
+                Objects.equals(raza, perro.raza);
     }
-
-    
 }

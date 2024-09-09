@@ -23,6 +23,7 @@ public class Application {
         animales.add(gato1);
         animales.add(gato2);
 
+        System.out.println("Animales");
         for (Animal animal : animales) {
             if(animal instanceof Perro){
                 Perro perro = (Perro) animal;
@@ -37,16 +38,15 @@ public class Application {
             animal.comer();
             animal.dormir();
         }
+        mostrarAnimal(perro1);
+        mostrarAnimal(perro2);
+        mostrarAnimal(gato1);
+        mostrarAnimal(gato2);
 
-        // mostrarAnimal(perro1);
-        // mostrarAnimal(perro2);
-        // mostrarAnimal(gato1);
-        // mostrarAnimal(gato2);
-
-        // metodo(perro1, perro2);
-        // metodo(gato1, gato2);
-        // metodo(gato1, gato2);
-        // metodo(gato1, gato1);
+        metodo(perro1, perro2);
+        metodo(gato1, gato2);
+        metodo(gato1, gato2);
+        metodo(gato1, gato1);
 
     }
     public static void mostrarAnimal(Animal animal) {
